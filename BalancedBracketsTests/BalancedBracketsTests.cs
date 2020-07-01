@@ -8,10 +8,22 @@ namespace BalancedBracketsTests
     {
         // TODO: Add tests to this file.
 
+        //[TestMethod]
+        //public void EmptyTest()
+        //{
+        //    Assert.AreEqual(true, true);
+        //}
+
         [TestMethod]
-        public void EmptyTest()
+        public void OnlyBracketsReturnsTrue()
         {
-            Assert.AreEqual(true, true);
+            Assert.IsTrue(BalancedBrackets.HasBalancedBrackets("[]"));
+        }
+
+        [TestMethod]
+        public void ReverseBracketsReturnsFalse()
+        {
+            Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("]["));
         }
     }
 }
